@@ -23,14 +23,19 @@ SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 --- 02 COLORS
-- Primary: #e67e22 #cf711f
-- Tints :#fdf2e9
-- Shades: #45260a
+- Primary: #e67e22 #cf711f 
+- Tints 
+#fdf2e9
+#fae5d3
+#eb984e
+- Shades: #cf711f
 - Greys:
 #6f6f6f (lightest grey allowed on #fdf2e9)
 #555
 #333
 --- 05 SHADOWS
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
 --- 06 BORDER-RADIUS
 Default: 9px
 Medium: 11px
@@ -487,4 +492,39 @@ html {
 .feature-text {
 	font-size: 1.8rem;
 	line-height: 1.8;
+}
+
+/*************************/
+/** CTA SECTION **/
+/*************************/
+
+.section-cta {
+	padding: 9.6rem 0;
+}
+
+.cta {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background-color: #e67e22;
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.18);
+	border-radius: 11px;
+	/* 90deg 180deg to right/left, to right bottom */
+	background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+	overflow: hidden;
+	height: 55rem;
+}
+
+.cta-text-box {
+}
+.cta-img-box {
+	/* it look at the current directory path  */
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(235, 151, 78, 0.35),
+			rgba(230, 125, 34, 0.35)
+		),
+		url("../img/eating.jpg");
+	/* no matter how big the pic is, it will cover the whole */
+	background-size: cover;
+	background-position: center;
 }
