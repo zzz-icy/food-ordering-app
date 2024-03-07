@@ -180,3 +180,6 @@ strong {
 .grid--center-v {
 	align-items: center;
 }
+
+/* desktop first - max width
+mobile first - min width */
