@@ -17,6 +17,7 @@ Bold: 700
 Default: 1
 Small: 1.05
 Medium 1.2
+Large 1.8
 Paragraph default: 1.6
 
 SPACING SYSTEM (px)
@@ -92,7 +93,7 @@ html {
 	list-style: none;
 	display: flex;
 	align-items: center;
-	gap: 3.2rem;
+	gap: 4.8rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -121,6 +122,28 @@ html {
 .nav-cta:active {
 	color: #cf711f;
 }
+
+/*************************/
+/* MOBILE */
+/*************************/
+
+.btn-mobile-nav {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+.icon-mobile-nav {
+	height: 4.8rem;
+	width: 4.8rem;
+	color: #333;
+}
+/* select css based on attribute */
+.icon-mobile-nav[name="menu-outline"] {
+}
+
+.icon-mobile-nav[name="close-outline"] {
+}
+
 /*************************/
 /* HERO SECTION */
 /*************************/
