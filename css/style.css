@@ -559,6 +559,8 @@ html {
 	font-size: 1.8rem;
 	line-height: 1.8;
 }
+
+/* this is a div without any content, so in some circumstances this would disappear */
 .cta-img-box {
 	/* it look at the current directory path  */
 	background-image: linear-gradient(
