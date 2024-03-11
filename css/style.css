@@ -561,6 +561,7 @@ html {
 }
 
 /* this is a div without any content, so in some circumstances this would disappear */
+/* need to give it a height to avoid this */
 .cta-img-box {
 	/* it look at the current directory path  */
 	background-image: linear-gradient(
