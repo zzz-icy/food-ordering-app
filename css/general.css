@@ -1,3 +1,31 @@
+* {
+	/* overriding any browser setting */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	line-height: 1;
+	font-weight: 400;
+	color: #555;
+	/* this only works if there is nothing absolutely positioned in relation to body */
+	overflow-x: hidden;
+}
+
+html {
+	/* this will define how many px a rem is */
+	/* font-size: 10px; */
+	/* 10px / 16px = 0.625 = 62.5% */
+	/* this will respect the user's font size setting */
+	font-size: 62.5%;
+	/* sometimes we have to add this to both body and html */
+	overflow-x: hidden;
+	/* not working for safari , maybe microsoft edge*/
+	/* scroll-behavior: smooth; */
+}
+
 .heading-primary,
 .heading-secondary,
 .header-tertiary {
