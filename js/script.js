@@ -29,7 +29,7 @@ btnNavEl.addEventListener("click", () => {
 })
 
 ///////////////////////////////
-// SMooth scrolling animation
+// Smooth scrolling animation
 ///////////////////////////////
 // only selecting anchor elements with href set
 
@@ -42,9 +42,31 @@ allLinks.forEach((link) => {
 		if (href === "#") {
 			window.scrollTo({ top: 0, behavior: "smooth" })
 		}
+		// scroll to other links
 		if (href !== "#" && href.startsWith("#")) {
 			const sectionEl = document.querySelector(href)
 			sectionEl.scrollIntoView({ behavior: "smooth" })
 		}
+		// close mobile navigation
+		if (link.classList.contains("main-nav-link")) {
+			headerEl.classList.toggle("nav-open")
+		}
 	})
 })
+
+// Sticky Navigation
+const sectionHeroEl = document.querySelector(".section-hero")
+const observer = new IntersectionObserver(
+	(entries) => {
+		const ent = entries[0]
+		if (ent.isIntersecting === false) {
+			document.body.classList.add("sticky")
+		}
+	},
+	{
+		// in the viewport
+		root: null,
+		threshold: 0,
+	}
+)
+observer.observe(sectionHeroEl)
